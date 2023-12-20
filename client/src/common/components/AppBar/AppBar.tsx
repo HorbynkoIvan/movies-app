@@ -1,7 +1,11 @@
 import { AppBar as AppBarMui, Toolbar, IconButton, Typography, Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export const AppBar = () => {
+type Props = {
+  handleDrawerOpen: () => void;
+};
+
+export const AppBar = ({ handleDrawerOpen }: Props) => {
   return (
     <AppBarMui position="static">
       <Toolbar>
@@ -11,8 +15,7 @@ export const AppBar = () => {
           color="inherit"
           aria-label="menu"
           sx={{ mr: 2, display: { xl: "none", lg: "none" } }}
-          // onClick={() => setDrawerOpen(true)}
-        >
+          onClick={handleDrawerOpen}>
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
