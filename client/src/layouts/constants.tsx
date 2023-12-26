@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Home, Settings } from "@features";
+import { Home, Recommendation, Settings } from "@features";
 
 type RouteType = {
   path: string;
@@ -12,6 +12,10 @@ export const MAIN_ROUTES: Record<string, RouteType> = {
   settings: {
     path: "settings",
     element: <Settings />,
+  },
+  recommendation: {
+    path: "recommendation",
+    element: <Recommendation />,
   },
   notFound: {
     path: "*",
