@@ -12,18 +12,16 @@ export const MainLayout = () => {
       <AppBar handleDrawerOpen={handleDrawerOpen} />
       <Sidebar isDrawerOpen={isDrawerOpen} handleDrawerClose={handleDrawerClose} />
 
-      <Container maxWidth="xl">
-        <Outlet />
-      </Container>
-      {/* <Box*/}
-      {/*  component="main"*/}
-      {/*  sx={{*/}
-      {/*    width: "100%",*/}
-      {/*    flexGrow: 1,*/}
-      {/*    mt: "73px",*/}
-      {/*  }}>*/}
-      {/*  <Outlet />*/}
-      {/* </Box>*/}
+      <Box
+        component="main"
+        sx={{
+          backgroundColor: (theme) => theme.palette.grey[100],
+          height: "100vh",
+        }}>
+        <Container maxWidth="xl">
+          <Outlet />
+        </Container>
+      </Box>
     </Box>
   );
 };
