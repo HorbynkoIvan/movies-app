@@ -10,14 +10,19 @@
     "lint:fix": "eslint --quiet --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config .prettierrc",
     "prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config .prettierrc",
-    "prepare": "husky install",
-    "preview": "vite preview"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "yarn lint:fix",
-    "*.{js,jsx,ts,tsx,css,md,json}": "yarn prettier:fix"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-vite": "^7.6.6",
+    "@storybook/test": "^7.6.6",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -34,9 +39,11 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
+    "storybook": "^7.6.6",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-checker": "^0.6.2"

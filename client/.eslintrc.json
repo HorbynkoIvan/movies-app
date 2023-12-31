@@ -5,7 +5,8 @@
     "plugin:import/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "env": {
     "browser": true,
@@ -17,13 +18,27 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-        "pathGroupsExcludedImportTypes": ["builtin"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ],
         "newlines-between": "always"
       }
     ],
@@ -56,14 +71,26 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [".tsx"]
+        "extensions": [
+          ".tsx"
+        ]
       }
     ],
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "@typescript-eslint/no-shadow": ["error"],
-    "@typescript-eslint/no-explicit-any": ["off"],
-    "prettier/prettier": ["error"]
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error"
+    ],
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
+    "@typescript-eslint/no-explicit-any": [
+      "off"
+    ],
+    "prettier/prettier": [
+      "error"
+    ]
   },
   "settings": {
     "react": {
